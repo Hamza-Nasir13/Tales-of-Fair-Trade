@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "index.py"  /* <-- CHANGE THIS FROM "app.py" TO "index.py" */
     }
   ]
 }
