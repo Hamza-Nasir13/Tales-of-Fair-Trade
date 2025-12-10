@@ -21,7 +21,7 @@ def about():
 @app.route('/download')
 def download_pdf():
     # 1. Define the filename and path (relative to app.py)
-    path_to_file = "Tales of Fair Trade.pdf"
+    path_to_file = "static/Tales of Fair Trade.pdf"
     
     # 2. Return the file using send_file
     #    as_attachment=True forces the browser to download the file.
