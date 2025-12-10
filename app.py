@@ -1,4 +1,5 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, send_from_directory
+import os
 
 # 1. Create a Flask application instance.
 # The argument __name__ tells Flask where to look for resources.
@@ -20,16 +21,15 @@ def about():
 
 @app.route('/download')
 def download_pdf():
-    # 1. Define the filename and path (relative to app.py)
-    path_to_file = "static/Tales of Fair Trade.pdf"
+    DOWNLOAD_DIRECTORY = os.path.join(app.root_path, 'static')
     
-    # 2. Return the file using send_file
-    #    as_attachment=True forces the browser to download the file.
-    #    download_name sets the filename the user sees.
-    return send_file(
-        path_to_file,
+    FILENAME = "Tales of Fair Trade.pdf"
+    
+    return send_from_directory(
+        directory=DOWNLOAD_DIRECTORY,
+        path=FILENAME,
         as_attachment=True,
-        download_name="Tales of Fair Trade.pdf"
+        download_name=FILENAME
     )
 
 # if __name__ == '__main__':
