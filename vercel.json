@@ -13,8 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "app.py" 
-      /* Vercel often requires this specific structure when paired with the build definition. */
+      "dest": "app.py"
     }
   ]
 }
