@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/download",
+      "dest": "/static/Tales of Fair Trade.pdf"
+    },
+    {
       "src": "/(.*)",
       "dest": "app.py"
     }

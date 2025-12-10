@@ -19,18 +19,18 @@ def about():
     """Renders a simple text message for the about page."""
     return "This is the About page."
 
-@app.route('/download')
-def download_pdf():
-    DOWNLOAD_DIRECTORY = os.path.join(app.root_path, 'static')
+# @app.route('/download')
+# def download_pdf():
+#     DOWNLOAD_DIRECTORY = os.path.join(app.root_path, 'static')
     
-    FILENAME = "Tales of Fair Trade.pdf"
+#     FILENAME = "Tales of Fair Trade.pdf"
     
-    return send_from_directory(
-        directory=DOWNLOAD_DIRECTORY,
-        path=FILENAME,
-        as_attachment=True,
-        download_name=FILENAME
-    )
+#     return send_from_directory(
+#         directory=DOWNLOAD_DIRECTORY,
+#         path=FILENAME,
+#         as_attachment=True,
+#         download_name=FILENAME
+#     )
 
 # if __name__ == '__main__':
 #     # Ensure you are still running in debug mode for easy development
