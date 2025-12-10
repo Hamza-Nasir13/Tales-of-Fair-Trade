@@ -8,8 +8,13 @@
   ],
   "routes": [
     {
+      "src": "/download",
+      "dest": "/static/Tales of Fair Trade.pdf"
+    },
+    {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "app.py" 
+      /* Vercel often requires this specific structure when paired with the build definition. */
     }
   ]
 }
